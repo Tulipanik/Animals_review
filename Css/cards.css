@@ -1,0 +1,165 @@
+.card {
+  --shadow: rgba(17, 17, 17, 0.7);
+  background-color: white;
+  width: 25.33%;
+  height: 200px;
+  margin: 4%;
+  box-shadow: 0 0 5px var(--shadow), 5px 10px 10px var(--shadow);
+  float: left;
+  position: relative;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+#salamander {
+  font-size: 0.9rem;
+}
+.card h6 {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+}
+
+.card img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.card .hover {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.card .hover p {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 60%;
+  padding-bottom: 30%;
+  vertical-align: bottom;
+  align-items: center;
+  word-break: keep-all;
+  overflow-y: auto;
+  overflow-x: visible;
+  cursor: default;
+}
+
+.card .hover em {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.5rem;
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+  top: 100%;
+  left: 50%;
+  word-break: break-all;
+  transform: translate(-50%, -100%);
+  text-decoration: none;
+  text-align: center;
+  cursor: default;
+}
+
+.card .hover a:visited,
+.card .hover a:link,
+.card .hover a:hover,
+.card .hover a:active {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    height: 300px;
+  }
+
+  #salamander {
+    font-size: 1.2rem;
+  }
+
+  .card h6 {
+    font-size: 1.5rem;
+  }
+
+  .card .hover p {
+    font-size: 0.7rem;
+  }
+
+  .card .hover a,
+  .card .hover em {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    height: 500px;
+  }
+
+  #salamander {
+    font-size: 2rem;
+  }
+
+  .card h6 {
+    font-size: 2rem;
+  }
+
+  .card .hover p {
+    font-size: 1rem;
+  }
+
+  .card .hover a,
+  .card .hover em {
+    font-size: 1rem;
+  }
+}
+
+.card:hover img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card:hover h6 {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.card:hover .hover {
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.card ::-webkit-scrollbar-track {
+  background-color: rgba(17, 17, 17, 0.1);
+  border-radius: 5px;
+}
+.card ::-webkit-scrollbar-thumb {
+  background-color: rgba(53, 55, 59, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(53, 55, 59, 0.9);
+}
